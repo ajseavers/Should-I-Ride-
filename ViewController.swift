@@ -32,13 +32,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     var coordinate: (lat: Double, long: Double) = (0.0,0.0)
     var complete: String = ""
-    var dailyTemperatureHigh = 70
     var dailyTemperatureLow = 50
     let secondView = SecondViewController()
-    var currentTemperature: Int! = 0
-    var currentTemperatureSlider: Int! = 0
+    var currentTemperature: Int! = 50
+    var currentTemperatureSlider: Int! = 50
     var currentPrecip: Int! = 0
-    var currentPrecipSlider: Int! = 0
+    var currentPrecipSlider: Int! = 20
 
 //Actions
     @IBAction func valueChangedTemperatureSlider(sender: AnyObject) {
