@@ -97,7 +97,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         coordinate.long = userLocation.coordinate.longitude
         print("Your current Location is: \(coordinate)")
         getWeather()
-        //shouldIRideFunction()
     }
 
     func getWeather() {
