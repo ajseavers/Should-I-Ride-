@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,26 +16,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MotorcycleIcon" translatesAutoresizingMaskIntoConstraints="NO" id="gwR-px-X8O">
-                                <rect key="frame" x="242" y="235" width="116" height="130"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="gwR-px-X8O" secondAttribute="height" multiplier="127:132" constant="-9.0757575757575779" id="95a-K0-BlH"/>
-                                    <constraint firstAttribute="width" constant="116" id="CFf-MV-Akm"/>
-                                    <constraint firstAttribute="height" constant="130" id="Rh7-rP-ccX"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="95a-K0-BlH"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="gwR-px-X8O" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="GxF-Kg-gZg"/>
-                            <constraint firstItem="gwR-px-X8O" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="PDL-pR-zrX"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -44,7 +24,4 @@
             <point key="canvasLocation" x="73" y="429"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="MotorcycleIcon" width="256" height="256"/>
-    </resources>
 </document>

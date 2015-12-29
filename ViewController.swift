@@ -38,7 +38,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var currentTemperatureSlider: Int! = 50
     var currentPrecip: Int! = 0
     var currentPrecipSlider: Int! = 20
-
+    
 //Actions
     @IBAction func valueChangedTemperatureSlider(sender: AnyObject) {
         let currentValueOfTemperatureSlider = Int(temperatureSlider.value)
@@ -47,7 +47,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     @IBAction func valueChangePrecipSlider(sender: AnyObject) {
         let currentValueOfPrecipSlider = Int((precipSlider.value)*100)
-        precipSliderLabel.text = "\(currentValueOfPrecipSlider)%"
+        if currentValueOfPrecipSlider <= 5 {
+            precipSliderLabel.text = "I Don't Ride When It Rains"
+        } else if (currentValueOfPrecipSlider > 5) && (currentValueOfPrecipSlider < 30) {
+            precipSliderLabel.text = "I Sometimes Ride When It Rains"
+        } else if (currentValueOfPrecipSlider >= 30) && (currentValueOfPrecipSlider < 75) {
+            precipSliderLabel.text = "I Usually Ride When It Rains"
+        } else {
+            precipSliderLabel.text = "I Always Ride When It Rains"
+        }
+    
+        //precipSliderLabel.text = "\(currentValueOfPrecipSlider)%"
         self.currentPrecipSlider = currentValueOfPrecipSlider
     }
     @IBAction func shouldIRideButton(sender: UIButton) {
