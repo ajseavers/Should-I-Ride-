@@ -11,7 +11,12 @@ import Foundation
 import CoreLocation
 import MapKit
 
-
+// Ideas For UI
+// Custom Typeface - fontsquirrel.com - montserrat, league spartan
+// thicker sliders
+// subtle gradient on background
+// upcase button
+// 
 
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
