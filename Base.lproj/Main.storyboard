@@ -254,6 +254,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="motorcycleImage" destination="aCW-Rj-0t0" id="lln-Hb-bY4"/>
                         <outlet property="precipSlider" destination="COh-Cy-lEM" id="fff-hr-0Db"/>
                         <outlet property="precipSliderLabel" destination="A5I-oH-LPn" id="yxj-D3-gMz"/>
                         <outlet property="temperatureSlider" destination="y6h-tZ-tfg" id="tQO-P7-0si"/>
@@ -276,16 +277,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPg-6G-E3g">
-                                <rect key="frame" x="20" y="20" width="92" height="36"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="Start Over">
-                                    <color key="titleColor" red="0.99607843139999996" green="0.54901960780000003" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="1PZ-iI-nYG"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mnf-M4-D7X">
                                 <rect key="frame" x="223" y="250" width="154.5" height="99"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -299,17 +290,46 @@
                                 <color key="textColor" red="0.12941176469999999" green="0.1450980392" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPg-6G-E3g">
+                                <rect key="frame" x="30" y="511" width="540" height="69"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.54901960780000003" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZPg-6G-E3g" secondAttribute="height" multiplier="23:9" constant="363.88888888888891" id="suc-W0-lXA"/>
+                                    <constraint firstAttribute="width" secondItem="ZPg-6G-E3g" secondAttribute="height" multiplier="180:23" id="trm-kJ-CKB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Start Over">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="suc-W0-lXA"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="1PZ-iI-nYG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Mnf-M4-D7X" firstAttribute="centerX" secondItem="tow-Em-I9n" secondAttribute="centerX" id="1VY-IT-5hC"/>
                             <constraint firstItem="Mnf-M4-D7X" firstAttribute="centerX" secondItem="tow-Em-I9n" secondAttribute="centerX" constant="1" id="1bS-G0-pJI"/>
+                            <constraint firstItem="kNR-gF-F3P" firstAttribute="top" secondItem="ZPg-6G-E3g" secondAttribute="bottom" constant="20" id="1gP-GN-aeg"/>
                             <constraint firstItem="ZPg-6G-E3g" firstAttribute="leading" secondItem="tow-Em-I9n" secondAttribute="leadingMargin" id="1oX-Nf-WZT"/>
                             <constraint firstItem="Mnf-M4-D7X" firstAttribute="centerY" secondItem="tow-Em-I9n" secondAttribute="centerY" id="2Gv-rF-l2h"/>
+                            <constraint firstItem="ZPg-6G-E3g" firstAttribute="centerX" secondItem="tow-Em-I9n" secondAttribute="centerX" id="Awn-Lh-7wY"/>
+                            <constraint firstItem="ZPg-6G-E3g" firstAttribute="top" secondItem="Mnf-M4-D7X" secondAttribute="bottom" constant="138" id="DyW-6N-iSe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZPg-6G-E3g" secondAttribute="trailing" constant="10" id="E7z-xz-9Ze"/>
                             <constraint firstItem="Mnf-M4-D7X" firstAttribute="centerX" secondItem="tow-Em-I9n" secondAttribute="centerX" constant="1" id="Ext-pf-oHW"/>
+                            <constraint firstItem="kNR-gF-F3P" firstAttribute="top" secondItem="ZPg-6G-E3g" secondAttribute="bottom" constant="20" id="FNJ-Mt-gjQ"/>
+                            <constraint firstItem="ZPg-6G-E3g" firstAttribute="centerX" secondItem="tow-Em-I9n" secondAttribute="centerX" id="ap3-zH-I6g"/>
+                            <constraint firstItem="ZPg-6G-E3g" firstAttribute="leading" secondItem="tow-Em-I9n" secondAttribute="leadingMargin" constant="10" id="dpu-ce-gRP"/>
                             <constraint firstItem="Mnf-M4-D7X" firstAttribute="centerY" secondItem="tow-Em-I9n" secondAttribute="centerY" id="e6w-4G-73s"/>
                             <constraint firstItem="Mnf-M4-D7X" firstAttribute="centerX" secondItem="tow-Em-I9n" secondAttribute="centerX" id="eeY-aB-j8E"/>
                             <constraint firstItem="ZPg-6G-E3g" firstAttribute="top" secondItem="diG-eK-WiQ" secondAttribute="bottom" id="h3b-wh-bNC"/>
+                            <constraint firstItem="Mnf-M4-D7X" firstAttribute="centerY" secondItem="tow-Em-I9n" secondAttribute="centerY" id="lvj-qP-HLV"/>
+                            <constraint firstItem="Mnf-M4-D7X" firstAttribute="centerX" secondItem="tow-Em-I9n" secondAttribute="centerX" id="ugR-lg-hfs"/>
                             <constraint firstItem="Mnf-M4-D7X" firstAttribute="centerY" secondItem="tow-Em-I9n" secondAttribute="centerY" id="wVa-JM-PUf"/>
                             <constraint firstItem="Mnf-M4-D7X" firstAttribute="centerY" secondItem="tow-Em-I9n" secondAttribute="centerY" id="zXU-NJ-d4g"/>
                         </constraints>
@@ -319,8 +339,15 @@
                                 <exclude reference="1bS-G0-pJI"/>
                                 <exclude reference="2Gv-rF-l2h"/>
                                 <exclude reference="Ext-pf-oHW"/>
+                                <exclude reference="e6w-4G-73s"/>
+                                <exclude reference="eeY-aB-j8E"/>
                                 <exclude reference="wVa-JM-PUf"/>
                                 <exclude reference="zXU-NJ-d4g"/>
+                                <exclude reference="1oX-Nf-WZT"/>
+                                <exclude reference="DyW-6N-iSe"/>
+                                <exclude reference="ap3-zH-I6g"/>
+                                <exclude reference="h3b-wh-bNC"/>
+                                <exclude reference="FNJ-Mt-gjQ"/>
                             </mask>
                         </variation>
                     </view>

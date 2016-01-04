@@ -22,6 +22,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var temperatureSlider: UISlider!
     @IBOutlet weak var precipSlider: UISlider!
     @IBOutlet weak var precipSliderLabel: UILabel!
+    @IBOutlet weak var motorcycleImage: UIImageView!
+    
     
 //Key Variables
     let locationManager = CLLocationManager()
@@ -78,23 +80,32 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             super.viewDidLoad()
  
         
-// Pulls the user's current location
+// Pulls the user's current location using the locationManager Function
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        
         shouldPerformSegueWithIdentifier("SubmitSegue", sender: self)
-        
         locationManager.stopUpdatingLocation()
     }
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        UIView.animateWithDuration(0.5, delay: 1.0, options: .CurveEaseOut, animations: {
+            
+            var motorcycleImageFrame = self.motorcycleImage.frame
+            
+            }
+            , completion: nil)
+    }
+    
 
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-
+//Pulls users current location using CLLocationManager and updates the cooridate variable.  Then runs the getWeather Function.
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation: CLLocation = locations[0]
         self.coordinate = (userLocation.coordinate.latitude, userLocation.coordinate.longitude)
@@ -105,7 +116,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-
+// uses the NetworkOperation class to pull forecast data from the ForecastService Struct using the user's current location.  For some reason, the current temperature and current precip variables only update correctly when testing on actual iPhone rather than simulated iPhone.
     func getWeather() {
         let forecastService = ForecastService(APIKey: forecastAPIKey)
         forecastService.getForecast(coordinate.lat, long: coordinate.long) {
@@ -129,6 +140,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+// Runs this segue when ShouldIRide Button is pressed.  Runs an if statement to confirm that conditions are acceptable for riding.  If all statements are true, the label on the second screen is changed from the word no, to the word yes.
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SubmitSegue" {
@@ -141,6 +153,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     print(currentTemperature)
                     print(currentPrecipSlider)
                     print(currentPrecip)
+                    print(dailyTemperatureLow)
 
                     svc.data = "Yes"
                     
