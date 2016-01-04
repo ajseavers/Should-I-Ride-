@@ -89,18 +89,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.stopUpdatingLocation()
     }
     
-    
-    override func viewDidAppear(animated: Bool) {
-        UIView.animateWithDuration(0.5, delay: 1.0, options: .CurveEaseOut, animations: {
-            
-            var motorcycleImageFrame = self.motorcycleImage.frame
-            
-            }
-            , completion: nil)
-    }
-    
-
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
