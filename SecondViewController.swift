@@ -14,11 +14,13 @@ class SecondViewController: UIViewController {
         var data: String! = "No"
         
     @IBOutlet weak var startOverButton: UIButton!
-        
+
+    
     override func viewDidLoad() {
             super.viewDidLoad()
             
             yesOrNoLabel.text = data
+        
         }
     
     override func didReceiveMemoryWarning() {

@@ -13,10 +13,23 @@
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="center" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MotorcycleIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Z4P-RI-fsR">
+                                <rect key="frame" x="242" y="243" width="117" height="113"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="113" id="R8x-6D-wps"/>
+                                    <constraint firstAttribute="width" constant="117" id="UDZ-2e-HGG"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Z4P-RI-fsR" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="0N0-uR-0iF"/>
+                            <constraint firstItem="Z4P-RI-fsR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fO7-Xd-1Z2"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +37,7 @@
             <point key="canvasLocation" x="73" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MotorcycleIcon" width="256" height="256"/>
+    </resources>
 </document>
