@@ -45,7 +45,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     // Causes the value of the Temperature Slider to update the value of the temperature slider
     @IBAction func valueChangedTemperatureSlider(sender: AnyObject) {
         let currentValueOfTemperatureSlider = Int(temperatureSlider.value)
-        if (currentValueOfTemperatureSlider > -20) && (currentValueOfTemperatureSlider < 80) {
+        if (currentValueOfTemperatureSlider > -20) && (currentValueOfTemperatureSlider < 69) {
             temperatureSliderLabel.text = "I won't ride under \(currentValueOfTemperatureSlider)º"
         }
         else if (currentValueOfTemperatureSlider == -20) {
@@ -61,14 +61,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     // Causes the value of the Precipitation Slider to update the value of your precipitation slider
     @IBAction func valueChangePrecipSlider(sender: AnyObject) {
         let currentValueOfPrecipSlider = Int((precipSlider.value)*100)
-        if currentValueOfPrecipSlider <= 5 {
+        if currentValueOfPrecipSlider <= 15 {
             precipSliderLabel.text = "I don't ride when it rains"
-        } else if (currentValueOfPrecipSlider > 5) && (currentValueOfPrecipSlider < 30) {
-            precipSliderLabel.text = "I sometimes ride when it rains"
+        } else if (currentValueOfPrecipSlider > 15) && (currentValueOfPrecipSlider < 30) {
+            precipSliderLabel.text = "I don't like to ride when it rains"
         } else if (currentValueOfPrecipSlider >= 30) && (currentValueOfPrecipSlider < 75) {
-            precipSliderLabel.text = "I usually ride when it rains"
+            precipSliderLabel.text = "I will sometimes ride when it rains"
         } else {
-            precipSliderLabel.text = "I always ride when it rains"
+            precipSliderLabel.text = "I will always ride when it rains"
         }
         self.currentPrecipSlider = currentValueOfPrecipSlider
     }

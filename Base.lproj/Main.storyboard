@@ -28,7 +28,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="COh-Cy-lEM">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.57499999999999996" minValue="0.14999999999999999" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="COh-Cy-lEM">
                                 <rect key="frame" x="108" y="384" width="383" height="31"/>
                                 <color key="tintColor" red="0.40392156862745099" green="0.90980392156862744" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -169,7 +169,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="-20" maxValue="80" translatesAutoresizingMaskIntoConstraints="NO" id="y6h-tZ-tfg">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="-20" maxValue="80" translatesAutoresizingMaskIntoConstraints="NO" id="y6h-tZ-tfg">
                                 <rect key="frame" x="108" y="219" width="383" height="31"/>
                                 <color key="tintColor" red="0.40392156862745099" green="0.90980392156862744" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -211,7 +211,7 @@
                                 </variation>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.057504069411467927" green="0.048269163688912847" blue="0.29923329454787229" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.043072774376179075" green="0.035748006661285553" blue="0.22484832114361697" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.12941176470588234" green="0.14509803921568626" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="COh-Cy-lEM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="300" id="0FI-PV-HuV"/>
@@ -408,7 +408,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="377" y="390"/>
+            <point key="canvasLocation" x="554" y="350"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="HK8-Ie-5pz">
@@ -504,7 +504,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LF7-BK-0nI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1126" y="247"/>
+            <point key="canvasLocation" x="1356" y="350"/>
         </scene>
     </scenes>
     <resources>
