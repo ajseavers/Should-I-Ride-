@@ -28,6 +28,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var precipSlider: UISlider!
     @IBOutlet weak var precipSliderLabel: UILabel!
     @IBOutlet weak var motorcycleImage: UIImageView!
+    @IBOutlet weak var lowThermoImage: UIImageView!
+    @IBOutlet weak var thermoImage: UIImageView!
+    @IBOutlet weak var stormyImage: UIImageView!
+    @IBOutlet weak var sunImage: UIImageView!
+    
+    
     
     
 //Key Variables

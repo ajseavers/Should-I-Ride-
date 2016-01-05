@@ -400,10 +400,14 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="lowThermoImage" destination="cST-oX-qg0" id="jcK-6s-nML"/>
                         <outlet property="precipSlider" destination="COh-Cy-lEM" id="fff-hr-0Db"/>
                         <outlet property="precipSliderLabel" destination="A5I-oH-LPn" id="yxj-D3-gMz"/>
+                        <outlet property="stormyImage" destination="JEJ-Nd-rJd" id="KBh-vM-jRR"/>
+                        <outlet property="sunImage" destination="b7b-pg-7a4" id="Bem-Ul-ynm"/>
                         <outlet property="temperatureSlider" destination="y6h-tZ-tfg" id="tQO-P7-0si"/>
                         <outlet property="temperatureSliderLabel" destination="UwJ-Gx-Mq7" id="AvW-gO-n7B"/>
+                        <outlet property="thermoImage" destination="RsJ-Fh-TU8" id="8sd-rM-zIx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
