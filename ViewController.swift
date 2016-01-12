@@ -17,6 +17,15 @@ import MapKit
 // subtle gradient on background
 // upcase button
 // 
+//
+// Home Screen -> Welcome, Set preferences, save, and then save data somehow
+// Then when opened next, Load data and dispay yes or no -> run if this then yes, if this then no, else indicator. Make easy for apple watch view.
+// Save preferences in slider menu.
+//
+//
+//
+//
+//
 
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
@@ -33,18 +42,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var stormyImage: UIImageView!
     @IBOutlet weak var sunImage: UIImageView!
     
+    @IBOutlet weak var progressIndicatorCurrentLocation: UIActivityIndicatorView!
     
+    
+    @IBOutlet var test: [UIImageView]!
     
     
 //Key Variables
     let locationManager = CLLocationManager()
     var coordinate: (lat: Double, long: Double) = (0.0,0.0)
+    var coordinateCompare: (lat: Double, long: Double) = (0.0,0.0)
     var complete: String = ""
     var dailyTemperatureLow = 50
     let secondView = SecondViewController()
-    var currentTemperature: Int = 46
+    var currentTemperature: Int = 30
     var currentTemperatureSlider: Int! = 50
-    var currentPrecip: Int = 1
+    var currentPrecip: Int = 0
     var currentPrecipSlider: Int! = 20
     
 //Actions
@@ -89,7 +102,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
             super.viewDidLoad()
- 
+        
+        
+        override func shouldAutoRotate() -> Bool {
+            return false
+        }
+        
+        override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+            return UIInterfaceOrientation.Portrait.rawValue
+        }
+
+        
+// Starts running Progress Indicator for current location
+        progressIndicatorCurrentLocation.startAnimating()
+        progressIndicatorCurrentLocation.hidesWhenStopped = true
+
+
         
 // Pulls the user's current location using the locationManager Function
         locationManager.delegate = self
@@ -98,7 +126,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
         shouldPerformSegueWithIdentifier("SubmitSegue", sender: self)
         locationManager.stopUpdatingLocation()
+        
+               
+       
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -111,7 +143,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.coordinate.lat = userLocation.coordinate.latitude
         self.coordinate.long = userLocation.coordinate.longitude
         print("Your current Location is: \(coordinate)")
+        progressIndicatorCurrentLocation.stopAnimating()
         getWeather()
+        
+        
         
     }
     
@@ -146,14 +181,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             if let svc = segue.destinationViewController as? SecondViewController {
                 if (currentTemperatureSlider <= currentTemperature) && (currentPrecipSlider >= currentPrecip) && (currentTemperatureSlider <= (dailyTemperatureLow + 20))
                 {
-                    
                     print("It's a great day to ride")
-                    print(currentTemperatureSlider)
-                    print(currentTemperature)
-                    print(currentPrecipSlider)
-                    print(currentPrecip)
-                    print(dailyTemperatureLow)
-
                     svc.data = "Yes"
                     
                 } else { print("Don't ride today")

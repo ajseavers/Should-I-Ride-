@@ -13,6 +13,7 @@
             <string>LeagueSpartan-Bold</string>
             <string>LeagueSpartan-Bold</string>
             <string>LeagueSpartan-Bold</string>
+            <string>LeagueSpartan-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -52,7 +53,7 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you ride in the rain?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5I-oH-LPn">
-                                <rect key="frame" x="20" y="337" width="560" height="21.5"/>
+                                <rect key="frame" x="20" y="337" width="560" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="A5I-oH-LPn" secondAttribute="height" multiplier="120:53" id="DPc-SR-1pT"/>
                                     <constraint firstAttribute="height" constant="39" id="NUv-y1-fqr"/>
@@ -189,7 +190,7 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What temperature is too cold?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UwJ-Gx-Mq7">
-                                <rect key="frame" x="35" y="172" width="530" height="21.5"/>
+                                <rect key="frame" x="35" y="173" width="530" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UwJ-Gx-Mq7" secondAttribute="height" multiplier="423:19" id="1Dp-1U-hQO"/>
                                     <constraint firstAttribute="height" constant="40" id="2ZE-8Z-JmT"/>
@@ -209,6 +210,19 @@
                                         <exclude reference="yVT-Ti-w2R"/>
                                     </mask>
                                 </variation>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="MbU-XW-Ixc">
+                                <rect key="frame" x="560" y="20" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gathering Current Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIJ-Gn-H7C">
+                                <rect key="frame" x="274" y="20" width="243" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="243" id="Q5A-pg-UbM"/>
+                                    <constraint firstAttribute="height" constant="22" id="wwN-Tr-FS4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LeagueSpartan-Bold" family="League Spartan" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.043072774376179075" green="0.035748006661285553" blue="0.22484832114361697" alpha="1" colorSpace="calibratedRGB"/>
@@ -235,6 +249,7 @@
                             <constraint firstItem="7y9-bv-V2M" firstAttribute="top" secondItem="JEJ-Nd-rJd" secondAttribute="bottom" constant="66" id="9Du-5Z-AJo"/>
                             <constraint firstItem="A5I-oH-LPn" firstAttribute="top" secondItem="y6h-tZ-tfg" secondAttribute="bottom" constant="84" id="BHs-06-Vzi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="COh-Cy-lEM" secondAttribute="trailing" constant="36" id="BjS-RN-DVE"/>
+                            <constraint firstItem="MbU-XW-Ixc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Cd6-st-kgO"/>
                             <constraint firstItem="7y9-bv-V2M" firstAttribute="top" secondItem="COh-Cy-lEM" secondAttribute="bottom" constant="80" id="Cje-dS-crq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7y9-bv-V2M" secondAttribute="bottom" constant="8" id="EQD-N7-6H6"/>
                             <constraint firstItem="COh-Cy-lEM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EZn-CY-mf6"/>
@@ -246,6 +261,7 @@
                             <constraint firstItem="UwJ-Gx-Mq7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JQc-4s-idb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="COh-Cy-lEM" secondAttribute="trailing" constant="36" id="JpP-ze-gKQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7y9-bv-V2M" secondAttribute="bottom" constant="8" id="KdC-ba-y05"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MbU-XW-Ixc" secondAttribute="trailing" id="KjW-Ea-7bt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="b7b-pg-7a4" secondAttribute="trailing" constant="15" id="LBI-Uj-pUj"/>
                             <constraint firstItem="7y9-bv-V2M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lhb-fp-NDi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7y9-bv-V2M" secondAttribute="trailing" constant="10" id="Lng-EZ-Oc2"/>
@@ -303,7 +319,9 @@
                             <constraint firstItem="A5I-oH-LPn" firstAttribute="top" secondItem="COh-Cy-lEM" secondAttribute="bottom" constant="-4" id="o61-un-YtW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7y9-bv-V2M" secondAttribute="trailing" constant="91" id="oBN-PM-s9L"/>
                             <constraint firstItem="UwJ-Gx-Mq7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oNc-NH-fad"/>
+                            <constraint firstItem="QIJ-Gn-H7C" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="opw-Dq-XUs"/>
                             <constraint firstItem="y6h-tZ-tfg" firstAttribute="top" secondItem="UwJ-Gx-Mq7" secondAttribute="bottom" constant="25" id="qBu-rc-ibp"/>
+                            <constraint firstItem="MbU-XW-Ixc" firstAttribute="leading" secondItem="QIJ-Gn-H7C" secondAttribute="trailing" constant="43" id="qpm-Mx-kKq"/>
                             <constraint firstItem="COh-Cy-lEM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="35" id="vHo-xx-1mf"/>
                             <constraint firstItem="7y9-bv-V2M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="vRz-VH-2jU"/>
                             <constraint firstItem="A5I-oH-LPn" firstAttribute="top" secondItem="y6h-tZ-tfg" secondAttribute="bottom" constant="88.5" id="vg2-0m-ITF"/>
@@ -403,6 +421,7 @@
                         <outlet property="lowThermoImage" destination="cST-oX-qg0" id="jcK-6s-nML"/>
                         <outlet property="precipSlider" destination="COh-Cy-lEM" id="fff-hr-0Db"/>
                         <outlet property="precipSliderLabel" destination="A5I-oH-LPn" id="yxj-D3-gMz"/>
+                        <outlet property="progressIndicatorCurrentLocation" destination="MbU-XW-Ixc" id="Qwg-76-LLp"/>
                         <outlet property="stormyImage" destination="JEJ-Nd-rJd" id="KBh-vM-jRR"/>
                         <outlet property="sunImage" destination="b7b-pg-7a4" id="Bem-Ul-ynm"/>
                         <outlet property="temperatureSlider" destination="y6h-tZ-tfg" id="tQO-P7-0si"/>
