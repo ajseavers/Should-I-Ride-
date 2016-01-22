@@ -104,18 +104,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             super.viewDidLoad()
         
         
-        override func shouldAutoRotate() -> Bool {
-            return false
-        }
-        
-        override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-            return UIInterfaceOrientation.Portrait.rawValue
-        }
-
-        
+         
 // Starts running Progress Indicator for current location
         progressIndicatorCurrentLocation.startAnimating()
-        progressIndicatorCurrentLocation.hidesWhenStopped = true
+        
 
 
         
@@ -144,6 +136,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.coordinate.long = userLocation.coordinate.longitude
         print("Your current Location is: \(coordinate)")
         progressIndicatorCurrentLocation.stopAnimating()
+        progressIndicatorCurrentLocation.hidesWhenStopped = true
         getWeather()
         
         
