@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -14,9 +14,242 @@
             <string>LeagueSpartan-Bold</string>
             <string>LeagueSpartan-Bold</string>
             <string>LeagueSpartan-Bold</string>
+            <string>LeagueSpartan-Bold</string>
+            <string>LeagueSpartan-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
+        <!--Get Started View Controller-->
+        <scene sceneID="oeB-lN-bET">
+            <objects>
+                <viewController id="d2h-lE-Me0" customClass="GetStartedViewController" customModule="Should_I_Ride_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kNQ-sa-vrr"/>
+                        <viewControllerLayoutGuide type="bottom" id="aKK-mb-WEe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zun-KD-xaP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Ride!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94V-jS-lLs">
+                                <rect key="frame" x="211" y="147" width="177.5" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="94V-jS-lLs" secondAttribute="height" multiplier="57:14" constant="-1.5357142857142776" id="aNZ-LP-7s3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LeagueSpartan-Bold" family="League Spartan" pointSize="34"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="but first..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jt5-P1-C3H">
+                                <rect key="frame" x="270" y="199" width="59.5" height="16.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Jt5-P1-C3H" secondAttribute="height" multiplier="18:5" id="tzM-dX-mLg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0k5-du-xD0">
+                                <rect key="frame" x="20" y="498" width="560" height="82"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.2784313725" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0k5-du-xD0" secondAttribute="height" multiplier="280:41" id="O2h-R6-3RX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LeagueSpartan-Bold" family="League Spartan" pointSize="28"/>
+                                <state key="normal" title="Get Started">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set your preferences." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4j-12-qVT">
+                                <rect key="frame" x="171.5" y="242" width="257.5" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="C4j-12-qVT" secondAttribute="height" multiplier="320:33" constant="-129.19696969696969" id="KY8-PO-SF9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="C4j-12-qVT" firstAttribute="centerX" secondItem="zun-KD-xaP" secondAttribute="centerX" id="077-am-orv"/>
+                            <constraint firstItem="94V-jS-lLs" firstAttribute="centerX" secondItem="zun-KD-xaP" secondAttribute="centerX" id="6GF-Gb-bLJ"/>
+                            <constraint firstItem="C4j-12-qVT" firstAttribute="top" secondItem="Jt5-P1-C3H" secondAttribute="bottom" constant="37" id="CJl-H6-XZc"/>
+                            <constraint firstItem="aKK-mb-WEe" firstAttribute="top" secondItem="0k5-du-xD0" secondAttribute="bottom" constant="20" id="IHA-ZX-ypf"/>
+                            <constraint firstItem="C4j-12-qVT" firstAttribute="top" secondItem="Jt5-P1-C3H" secondAttribute="bottom" constant="33.5" id="Oq8-gD-Avc"/>
+                            <constraint firstItem="94V-jS-lLs" firstAttribute="centerY" secondItem="zun-KD-xaP" secondAttribute="centerY" constant="-130.75" id="Q8j-kn-Pz5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0k5-du-xD0" secondAttribute="trailing" id="WAu-kj-gP1"/>
+                            <constraint firstItem="C4j-12-qVT" firstAttribute="top" secondItem="Jt5-P1-C3H" secondAttribute="bottom" constant="26" id="X02-qR-V5T"/>
+                            <constraint firstItem="Jt5-P1-C3H" firstAttribute="centerX" secondItem="zun-KD-xaP" secondAttribute="centerX" id="ZEt-1m-875"/>
+                            <constraint firstItem="C4j-12-qVT" firstAttribute="top" secondItem="Jt5-P1-C3H" secondAttribute="bottom" constant="27" id="e1x-Jd-dQe"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="0k5-du-xD0" secondAttribute="leading" id="jPP-l9-Mwz"/>
+                            <constraint firstItem="Jt5-P1-C3H" firstAttribute="top" secondItem="94V-jS-lLs" secondAttribute="bottom" constant="8" id="kua-0X-NV1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CJl-H6-XZc"/>
+                                <exclude reference="Oq8-gD-Avc"/>
+                                <exclude reference="X02-qR-V5T"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IIG-KE-Oe7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-488" y="-931"/>
+        </scene>
+        <!--Type Of Rider View Controller-->
+        <scene sceneID="0H3-qg-ycL">
+            <objects>
+                <viewController id="Pxy-G5-uQJ" customClass="TypeOfRiderViewController" customModule="Should_I_Ride_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RuV-Da-bBh"/>
+                        <viewControllerLayoutGuide type="bottom" id="GlE-EF-pew"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TGe-8A-lL7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yoX-YO-2Aa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301" y="-2116"/>
+        </scene>
+        <!--Precip View Controller-->
+        <scene sceneID="rSe-1u-mQG">
+            <objects>
+                <viewController id="dEs-dZ-h7I" customClass="PrecipViewController" customModule="Should_I_Ride_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hyf-B4-FcT"/>
+                        <viewControllerLayoutGuide type="bottom" id="xNx-vx-wJO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ddw-ku-BQw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gir-ja-l5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1143" y="-2116"/>
+        </scene>
+        <!--How Long View Controller-->
+        <scene sceneID="v5W-Yj-I4j">
+            <objects>
+                <viewController id="maE-yf-Ruw" customClass="HowLongViewController" customModule="Should_I_Ride_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Fh-n2-IIp"/>
+                        <viewControllerLayoutGuide type="bottom" id="CMt-Qb-ewV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uyv-pg-axh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tN2-Ye-u14" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1151" y="-1377"/>
+        </scene>
+        <!--Setup Finished View Controller-->
+        <scene sceneID="Zbu-ec-qI8">
+            <objects>
+                <viewController id="S3e-qN-E8W" customClass="SetupFinishedViewController" customModule="Should_I_Ride_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RG6-Kh-el7"/>
+                        <viewControllerLayoutGuide type="bottom" id="I6f-18-6C3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UKS-FB-MyJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U3i-hW-QOv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1167" y="-641"/>
+        </scene>
+        <!--ShouldI Ride View Controller-->
+        <scene sceneID="MMY-vE-aea">
+            <objects>
+                <viewController id="QSZ-6X-Iut" customClass="ShouldIRideViewController" customModule="Should_I_Ride_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b9F-hC-XwE"/>
+                        <viewControllerLayoutGuide type="bottom" id="7E0-Wh-ivz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jGb-cg-4Sh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jSy-MI-F1J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2055" y="-993"/>
+        </scene>
+        <!--Prefs View Controller-->
+        <scene sceneID="iKf-IK-HIT">
+            <objects>
+                <viewController id="sk1-PG-shA" customClass="PrefsViewController" customModule="Should_I_Ride_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YHE-pX-d56"/>
+                        <viewControllerLayoutGuide type="bottom" id="F2c-2Y-d7I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wjx-iP-dBh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w6e-vv-QRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2045" y="-257"/>
+        </scene>
+        <!--Type Motorcycle View Controller-->
+        <scene sceneID="ieS-TM-e3s">
+            <objects>
+                <viewController id="L68-sD-v3i" customClass="TypeMotorcycleViewController" customModule="Should_I_Ride_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ehO-nQ-MnY"/>
+                        <viewControllerLayoutGuide type="bottom" id="b18-41-Wj9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0h1-nc-qQo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQF-rq-6yo">
+                                <rect key="frame" x="306" y="202" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2by-Gb-c64" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301" y="-1383"/>
+        </scene>
+        <!--Temperature View Controller-->
+        <scene sceneID="BeO-Lm-r46">
+            <objects>
+                <viewController id="KwV-c0-vKg" customClass="TemperatureViewController" customModule="Should_I_Ride_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n1h-cy-7Re"/>
+                        <viewControllerLayoutGuide type="bottom" id="4KG-5L-V5G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nl3-zQ-BQ8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ON-Lm-vAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="295" y="-641"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -431,7 +664,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="554" y="350"/>
+            <point key="canvasLocation" x="258" y="566"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="HK8-Ie-5pz">
@@ -527,7 +760,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LF7-BK-0nI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1356" y="350"/>
+            <point key="canvasLocation" x="1004" y="582"/>
         </scene>
     </scenes>
     <resources>

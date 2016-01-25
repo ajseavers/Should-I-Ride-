@@ -11,22 +11,21 @@ import Foundation
 import CoreLocation
 import MapKit
 
-// Ideas For UI
+// Ideas For UI -? Harder, like guitar hero extreme, motorcycle focus.
 // Custom Typeface - fontsquirrel.com - montserrat, league spartan
 // thicker sliders
 // subtle gradient on background
 // upcase button
 // 
 //
-// Home Screen -> Welcome, Set preferences, save, and then save data somehow
-// Then when opened next, Load data and dispay yes or no -> run if this then yes, if this then no, else indicator. Make easy for apple watch view.
-// Save preferences in slider menu.
+// 1. Save NSUSER Default
+// 2. Detect 1st Launch
+// 3. New UX ->
+//              Welcome ->
+//              Set Pref. -> Type Rider, Type Motorcycle, Temp, Precip, (Commute, Short Ride, Long Ride).
+//              Should I Ride, with menu at top left that slides out.
 //
-//
-//
-//
-//
-
+// 4. Apple Watch UX -> shows the should I ride button.
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -41,7 +40,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var thermoImage: UIImageView!
     @IBOutlet weak var stormyImage: UIImageView!
     @IBOutlet weak var sunImage: UIImageView!
-    
     @IBOutlet weak var progressIndicatorCurrentLocation: UIActivityIndicatorView!
     
     
@@ -59,6 +57,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var currentTemperatureSlider: Int! = 50
     var currentPrecip: Int = 0
     var currentPrecipSlider: Int! = 20
+
+   // let prefs = NSUserDefaults.standardUserDefaults()
+    
+    
     
 //Actions
     // Causes the value of the Temperature Slider to update the value of the temperature slider
